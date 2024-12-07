@@ -627,7 +627,10 @@ files = [
 ]
 
 [package.dependencies]
-numpy = {version = ">=1.26.0", markers = "python_version >= \"3.12\""}
+numpy = [
+    {version = ">=1.23.2", markers = "python_version == \"3.11\""},
+    {version = ">=1.26.0", markers = "python_version >= \"3.12\""},
+]
 python-dateutil = ">=2.8.2"
 pytz = ">=2020.1"
 tzdata = ">=2022.7"
@@ -1409,7 +1412,21 @@ files = [
 [package.extras]
 watchmedo = ["PyYAML (>=3.10)"]
 
+[[package]]
+name = "wheel"
+version = "0.45.1"
+description = "A built-package format for Python"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "wheel-0.45.1-py3-none-any.whl", hash = "sha256:708e7481cc80179af0e556bbf0cc00b8444c7321e2700b8d8580231d13017248"},
+    {file = "wheel-0.45.1.tar.gz", hash = "sha256:661e1abd9198507b1409a20c02106d9670b2576e916d58f520316666abca6729"},
+]
+
+[package.extras]
+test = ["pytest (>=6.0.0)", "setuptools (>=65)"]
+
 [metadata]
 lock-version = "2.0"
-python-versions = "^3.12"
-content-hash = "8dee8cfdd6d2b530bb1d344dd1e51a6274695fbcdbdd10feb96209581ee4e6ce"
+python-versions = ">=3.11,<4.0"
+content-hash = "ec98cf3a67127f66b2515c6a89b4f94782b45fbc8c258fe4f56ed3310d152223"
